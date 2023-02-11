@@ -1,6 +1,6 @@
 import pgp from "pg-promise";
 
-export default class Connection {
+export  class Connection {
 	connection: any;
 
 	constructor () {
@@ -15,3 +15,7 @@ export default class Connection {
 		return this.connection.$pool.end();
 	}
 }
+
+const connection = new Connection();
+
+export default connection;

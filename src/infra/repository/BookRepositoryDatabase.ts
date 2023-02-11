@@ -1,8 +1,7 @@
+import Author from "../../domain/entity/Author";
 import Book from "../../domain/entity/Book";
 import BookRepository from "../../domain/repository/BookRepository";
-import pgp from "pg-promise";
-import Author from "../../domain/entity/Author";
-import Connection from "../database/Connection";
+import { Connection } from "../database/Connection";
 
 export default class BookRepositoryDatabase implements BookRepository {
 
