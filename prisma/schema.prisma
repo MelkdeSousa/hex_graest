@@ -13,6 +13,7 @@ datasource db {
 model Book {
   id     String   @id
   title  String
+  price  Int
   author Author[]
 
   createdAt DateTime @default(now())

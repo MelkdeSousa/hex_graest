@@ -1,12 +1,11 @@
-import SaveBook from "../../../application/SaveBook";
-import connection from "../../database/Connection";
-import BookRepositoryDatabase from "../../repository/BookRepositoryDatabase";
+import SaveBook from '../../../application/SaveBook'
+import { BookRepositoryPrisma } from '../../repository/BookRepositoryPrisma'
 
 export default {
-    async saveBook (_: any, args: any) {
-        const bookRepository = new BookRepositoryDatabase(connection);
-        const saveBook = new SaveBook(bookRepository);
-        const output = saveBook.execute(args.book);
-        return output;
-    }
+  async saveBook(_: any, args: any) {
+    const bookRepository = new BookRepositoryPrisma()
+    const saveBook = new SaveBook(bookRepository)
+    const output = saveBook.execute(args.book)
+    return output
+  },
 }
